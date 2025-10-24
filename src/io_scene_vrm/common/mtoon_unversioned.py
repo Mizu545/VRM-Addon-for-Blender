@@ -52,6 +52,7 @@ class MtoonUnversioned:
     }
     vector_base_props_exchange_dict: Mapping[str, str] = {
         "_Color": "DiffuseColor",
+        "_HighColor": "LightColor",
         "_ShadeColor": "ShadeColor",
         "_EmissionColor": "EmissionColor",
         "_RimColor": "RimColor",
