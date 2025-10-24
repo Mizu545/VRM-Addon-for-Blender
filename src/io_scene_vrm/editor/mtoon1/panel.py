@@ -230,6 +230,15 @@ def draw_mtoon1_material(context: Context, layout: UILayout) -> None:
         material.name,
         ext.mtoon1,
         lighting_box,
+        mtoon, 
+        "light_add_texture",
+        "shade_color_factor",
+        is_vrm0=is_vrm0,
+    )
+    draw_texture_info(
+        material.name,
+        ext.mtoon1,
+        lighting_box,
         mtoon,
         "shade_multiply_texture",
         "shade_color_factor",
