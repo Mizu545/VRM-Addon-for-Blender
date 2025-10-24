@@ -39,6 +39,7 @@ class MtoonUnversioned:
 
     texture_kind_exchange_dict: Mapping[str, str] = {
         "_MainTex": "MainTexture",
+        "_HighTex": "HighlightTexture",
         "_ShadeTexture": "ShadeTexture",
         "_BumpMap": "NormalmapTexture",
         "_ReceiveShadowTexture": "ReceiveShadow_Texture",
