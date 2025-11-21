@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.16.0](https://github.com/saturday06/VRM-Addon-for-Blender/compare/v3.15.0...v3.16.0) (2025-11-08)
+
+
+### 🚀 Features
+
+* support blender 5.0 ([0ef59cd](https://github.com/saturday06/VRM-Addon-for-Blender/commit/0ef59cd2d6e51195b303c16e0ef5dceea0241c01))
+
+
+### 🐛 Bug Fixes
+
+* fixed a bug where a single outline material could be shared across multiple base materials ([fc6752f](https://github.com/saturday06/VRM-Addon-for-Blender/commit/fc6752f0260ac5e7f300f3bf32ceecd135a454f8))
+
 ## [3.15.0](https://github.com/saturday06/VRM-Addon-for-Blender/compare/v3.14.1...v3.15.0) (2025-10-19)
 
 
@@ -428,14 +440,14 @@ https://github.com/saturday06/VRM-Addon-for-Blender/blob/v2.40.0/src/io_scene_vr
 ### 🐞 Bug Fixes
 
 * add workaround for non-weighted skinned mesh export error ([a47a0d2](https://github.com/saturday06/VRM-Addon-for-Blender/commit/a47a0d289ea07527da24e63072601ed05eaae357))
-* unexpected constrainted node rotation on export ([90809f0](https://github.com/saturday06/VRM-Addon-for-Blender/commit/90809f03bd3f07a5b8747e56802cd927a425ed73))
+* unexpected constrained node rotation on export ([90809f0](https://github.com/saturday06/VRM-Addon-for-Blender/commit/90809f03bd3f07a5b8747e56802cd927a425ed73))
 
 ## [2.32.1](https://github.com/saturday06/VRM-Addon-for-Blender/compare/v2.32.0...v2.32.1) (2024-12-07)
 
 
 ### 🐞 Bug Fixes
 
-* fix the bug that VRM export causes unexpected constrainted bone rotation ([2425087](https://github.com/saturday06/VRM-Addon-for-Blender/commit/2425087a43b3f29f05a69fbf23745c2590cf54c8))
+* fix the bug that VRM export causes unexpected constrained bone rotation ([2425087](https://github.com/saturday06/VRM-Addon-for-Blender/commit/2425087a43b3f29f05a69fbf23745c2590cf54c8))
 
 
 ### 📝 Documentation

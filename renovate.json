@@ -4,7 +4,8 @@
     "config:best-practices",
     "schedule:weekends",
     ":automergeAll",
-    ":disableDependencyDashboard"
+    ":disableDependencyDashboard",
+    ":semanticCommitTypeAll(chore)"
   ],
   "minimumReleaseAge": "14 days",
   "lockFileMaintenance": {
@@ -25,14 +26,19 @@
   "customManagers": [
     {
       "customType": "regex",
-      "managerFilePatterns": ["/^(./)?tools/install_nvm.sh$/"],
+      "managerFilePatterns": ["/^tools/install_nvm.sh$/"],
       "matchStrings": [
-        "https://raw\\.githubusercontent\\.com/nvm-sh/nvm/v(?<currentValue>\\d+\\.\\d+\\.\\d+)/install\\.sh"
+        "\"https://raw\\.githubusercontent\\.com/nvm-sh/nvm/(?<currentValue>v\\d+\\.\\d+\\.\\d+)/install\\.sh\""
       ],
       "datasourceTemplate": "github-releases",
-      "depNameTemplate": "nvm-sh/nvm",
-      "extractVersionTemplate": "^v(?<version>\\d+\\.\\d+\\.\\d+)$",
-      "versioningTemplate": "semver"
+      "depNameTemplate": "nvm-sh/nvm"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/^.dvmrc$/"],
+      "matchStrings": ["(?<currentValue>\\d+\\.\\d+\\.\\d+)"],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "denoland/deno"
     }
   ]
 }

@@ -4,6 +4,7 @@
 setlocal enabledelayedexpansion
 pushd "%~dp0.."
 set PYTHONUTF8=1
+set UV_LINK_MODE=copy
 
 set no_pause=0
 if "%1"=="/NoPause" set no_pause=1
@@ -15,7 +16,7 @@ call uv run ruff check
 if %errorlevel% neq 0 goto :error
 
 echo ### codespell ###
-call uv run codespell %py_files%
+call uv run codespell
 if %errorlevel% neq 0 goto :error
 
 echo ### deno ###
@@ -30,11 +31,11 @@ call deno lint
 if %errorlevel% neq 0 goto :error
 
 echo ### pyright ###
-call deno run pyright
+call deno task pyright
 if %errorlevel% neq 0 goto :error
 
 echo ### vrm validator ###
-call deno run vrm-validator
+call deno task vrm-validator
 if %errorlevel% neq 0 goto :error
 
 popd
